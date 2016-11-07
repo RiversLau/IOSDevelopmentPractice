@@ -10,6 +10,6 @@
 
 @interface STWaterFallCollectionViewCell : UICollectionViewCell
 
-//@property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) UIImageView *imageView;
 
 @end

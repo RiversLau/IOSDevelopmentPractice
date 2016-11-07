@@ -10,12 +10,12 @@
 #import "STWaterFallFlowLayout.h"
 #import "STWaterFallCollectionViewCell.h"
 
-#define ImageCount 12
+#define ImageCount 5
 #define Column 3
 
 static NSString *CollectionViewCell = @"collectionCell";
 
-@interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface ViewController ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, STWaterFallLayoutDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -30,8 +30,6 @@ static NSString *CollectionViewCell = @"collectionCell";
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    _cellWidth = ([[UIScreen mainScreen] bounds].size.width - 30) / Column;
     
     [self.view addSubview:self.collectionView];
 }
@@ -48,13 +46,6 @@ static NSString *CollectionViewCell = @"collectionCell";
     return self.imageList.count;
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UIImage *image = _imageList[indexPath.row];
-    CGFloat height = [self imageHeight:image.size.height width:image.size.width];
-    return CGSizeMake(_cellWidth, height);
-}
-
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     
     return UIEdgeInsetsMake(10, 10, 10, 0);
@@ -63,24 +54,28 @@ static NSString *CollectionViewCell = @"collectionCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     STWaterFallCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CollectionViewCell forIndexPath:indexPath];
-//    cell.image = _imageList[indexPath.item];
-    cell.backgroundColor = [UIColor redColor];
+    
+    cell.imageView.image = _imageList[indexPath.row];
     return cell;
 }
 
-#pragma mark -- 计算图片高度 --
+#pragma mark -- 图片高度协议 --
 
-- (CGFloat)imageHeight:(CGFloat)height width:(CGFloat)width {
+- (CGFloat)waterFallLayout:(STWaterFallFlowLayout *)layout itemWidth:(CGFloat)width indexPath:(NSIndexPath *)indexPath {
     
-    float newHeight = height / width * _cellWidth;
-    return newHeight;
+    UIImage *image = _imageList[indexPath.row];
+    
+    CGFloat height = image.size.height / image.size.width * width;
+    return height;
 }
 
 - (UICollectionView *)collectionView {
     
     if (!_collectionView) {
         
-        STWaterFallFlowLayout *layout = [[STWaterFallFlowLayout alloc]init];
+        STWaterFallFlowLayout *layout = [[STWaterFallFlowLayout alloc]initWithColumnCount:3];
+        layout.delegate = self;
+        [layout setSpacing:10 rowSpacing:10 edgeInsets:UIEdgeInsetsMake(10, 10, 0, 10)];
         _collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.delegate = self;

@@ -8,9 +8,45 @@
 
 #import "STWaterFallFlowLayout.h"
 
-CGFloat const ColumnCount = 3;
+@interface STWaterFallFlowLayout()
+
+@property (nonatomic, assign) NSInteger cellCount;      //cell个数
+
+@property (nonatomic, strong) NSMutableArray *columnHeightArr;        //cell高度
+
+@property (nonatomic, strong) NSMutableArray *attributeArr;
+
+@property (nonatomic, assign) CGFloat columSpacing;
+
+@property (nonatomic, assign) CGFloat rowSpacing;
+
+@property (nonatomic, assign) UIEdgeInsets sectionInsets;
+
+@end
 
 @implementation STWaterFallFlowLayout
+
+- (instancetype)init {
+    
+    if (self = [super init]) {
+        self.columnCount = 2;
+    }
+    return self;
+}
+
+- (instancetype)initWithColumnCount:(NSInteger)columnCount {
+    if (self = [super init]) {
+        _columnCount = columnCount;
+    }
+    return self;
+}
+
+- (void)setSpacing:(CGFloat)columnSpacing rowSpacing:(CGFloat)rowSpacing edgeInsets:(UIEdgeInsets)sectionInsets {
+    
+    self.columSpacing = columnSpacing;
+    self.rowSpacing = rowSpacing;
+    self.sectionInset = sectionInsets;
+}
 
 //准备布局
 - (void)prepareLayout {
@@ -19,7 +55,6 @@ CGFloat const ColumnCount = 3;
     
     [self.columnHeightArr removeAllObjects];
     
-    self.delegate = (id<UICollectionViewDelegateFlowLayout>)self.collectionView.delegate;
     _cellCount = [self.collectionView numberOfItemsInSection:0];
     
     if (_cellCount == 0) {
@@ -27,7 +62,7 @@ CGFloat const ColumnCount = 3;
     }
     
     float top = 0;
-    for (int i = 0; i < ColumnCount; i++) {
+    for (int i = 0; i < self.columnCount; i++) {
         [_columnHeightArr addObject:[NSNumber numberWithFloat:top]];
     }
     
@@ -48,11 +83,8 @@ CGFloat const ColumnCount = 3;
     
     UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     
-    UIEdgeInsets edgeInsets = [self.delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:indexPath.row];
-    CGFloat xPadding = edgeInsets.left + edgeInsets.left + (ColumnCount - 1) * (edgeInsets.left + edgeInsets.right);
-    CGFloat cellWidth = (self.collectionView.frame.size.width - xPadding) / ColumnCount;
-    
-    CGSize itemSize = [self.delegate collectionView:self.autoContentAccessingProxy layout:self sizeForItemAtIndexPath:indexPath];
+    CGFloat xPadding = self.sectionInset.left + self.sectionInset.right + (self.columnCount - 1) * self.columSpacing;
+    CGFloat cellWidth = (self.collectionView.frame.size.width - xPadding) / self.columnCount;
     
     CGFloat shortColumnHeight = [[_columnHeightArr objectAtIndex:0] floatValue];
     NSUInteger shortColumnNum = 0;
@@ -64,10 +96,12 @@ CGFloat const ColumnCount = 3;
         }
     }
     
-    CGFloat xLocation = edgeInsets.left + shortColumnNum * (cellWidth + edgeInsets.left + edgeInsets.right);
-    CGFloat yLocation = shortColumnHeight + edgeInsets.top;
+    CGFloat xLocation = self.sectionInset.left + shortColumnNum * (cellWidth + self.columSpacing);
+    CGFloat yLocation = shortColumnHeight + self.sectionInset.top;
     
-    attrs.frame = CGRectMake(xLocation, yLocation, cellWidth, itemSize.height);
+    CGFloat height = [self.delegate waterFallLayout:self itemWidth:cellWidth indexPath:indexPath];
+    
+    attrs.frame = CGRectMake(xLocation, yLocation, cellWidth, height);
     self.columnHeightArr[shortColumnNum] = @(CGRectGetMaxY(attrs.frame));
     
     return attrs;

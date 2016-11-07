@@ -10,6 +10,19 @@
 
 @implementation STWaterFallCollectionViewCell
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    
+    if (self = [super initWithFrame:frame]) {
+        [self setSubviews];
+    }
+    return self;
+}
 
-
+- (void)setSubviews {
+    
+    _imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.contentView.frame.size.width, self.contentView.frame.size.height)];
+    _imageView.contentMode = UIViewContentModeScaleAspectFill;
+    _imageView.clipsToBounds = YES;
+    [self.contentView addSubview:_imageView];
+}
 @end

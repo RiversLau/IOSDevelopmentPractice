@@ -8,15 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+@class STWaterFallFlowLayout;
+
+@protocol STWaterFallLayoutDelegate <NSObject>
+
+@required
+- (CGFloat)waterFallLayout:(STWaterFallFlowLayout *)layout itemWidth:(CGFloat)width indexPath:(NSIndexPath *)indexPath;
+
+@end
+
 @interface STWaterFallFlowLayout : UICollectionViewFlowLayout
 
-//id<>带括号表示什么意思呢？为什么要用assign？
-@property (nonatomic, assign) id<UICollectionViewDelegateFlowLayout> delegate;
+- (instancetype)initWithColumnCount:(NSInteger)columnCount;
 
-@property (nonatomic, assign) NSInteger cellCount;      //cell个数
+@property (nonatomic, strong) id<STWaterFallLayoutDelegate> delegate;
 
-@property (nonatomic, strong) NSMutableArray *columnHeightArr;        //cell高度
+@property (nonatomic, assign) NSUInteger columnCount;
 
-@property (nonatomic, strong) NSMutableArray *attributeArr;
+- (void)setSpacing:(CGFloat)columnSpacing rowSpacing:(CGFloat)rowSpacing edgeInsets:(UIEdgeInsets)sectionInsets;
 
 @end
