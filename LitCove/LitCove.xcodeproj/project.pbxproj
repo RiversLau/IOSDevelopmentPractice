@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F4A69371DD181E3009CE857 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4A69361DD181E3009CE857 /* main.m */; };
+		3F4A693A1DD181E3009CE857 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4A69391DD181E3009CE857 /* AppDelegate.m */; };
+		3F4A693D1DD181E3009CE857 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4A693C1DD181E3009CE857 /* ViewController.m */; };
+		3F4A69401DD181E3009CE857 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4A693E1DD181E3009CE857 /* Main.storyboard */; };
+		3F4A69421DD181E3009CE857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4A69411DD181E3009CE857 /* Assets.xcassets */; };
+		3F4A69451DD181E3009CE857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4A69431DD181E3009CE857 /* LaunchScreen.storyboard */; };
+		3F4A69501DD181E3009CE857 /* LitCoveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4A694F1DD181E3009CE857 /* LitCoveTests.m */; };
+		3F4A695B1DD181E3009CE857 /* LitCoveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4A695A1DD181E3009CE857 /* LitCoveUITests.m */; };
+		3F4A696B1DD182F4009CE857 /* ChatSessionInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4A696A1DD182F4009CE857 /* ChatSessionInputBar.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F4A694C1DD181E3009CE857 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F4A692A1DD181E2009CE857 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F4A69311DD181E3009CE857;
+			remoteInfo = LitCove;
+		};
+		3F4A69571DD181E3009CE857 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F4A692A1DD181E2009CE857 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F4A69311DD181E3009CE857;
+			remoteInfo = LitCove;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F4A69321DD181E3009CE857 /* LitCove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LitCove.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F4A69361DD181E3009CE857 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F4A69381DD181E3009CE857 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3F4A69391DD181E3009CE857 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3F4A693B1DD181E3009CE857 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3F4A693C1DD181E3009CE857 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3F4A693F1DD181E3009CE857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F4A69411DD181E3009CE857 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F4A69441DD181E3009CE857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F4A69461DD181E3009CE857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F4A694B1DD181E3009CE857 /* LitCoveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LitCoveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F4A694F1DD181E3009CE857 /* LitCoveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LitCoveTests.m; sourceTree = "<group>"; };
+		3F4A69511DD181E3009CE857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F4A69561DD181E3009CE857 /* LitCoveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LitCoveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F4A695A1DD181E3009CE857 /* LitCoveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LitCoveUITests.m; sourceTree = "<group>"; };
+		3F4A695C1DD181E3009CE857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F4A69691DD182F4009CE857 /* ChatSessionInputBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSessionInputBar.h; sourceTree = "<group>"; };
+		3F4A696A1DD182F4009CE857 /* ChatSessionInputBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSessionInputBar.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F4A692F1DD181E3009CE857 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F4A69481DD181E3009CE857 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F4A69531DD181E3009CE857 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F4A69291DD181E2009CE857 = {
+			isa = PBXGroup;
+			children = (
+				3F4A69341DD181E3009CE857 /* LitCove */,
+				3F4A694E1DD181E3009CE857 /* LitCoveTests */,
+				3F4A69591DD181E3009CE857 /* LitCoveUITests */,
+				3F4A69331DD181E3009CE857 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F4A69331DD181E3009CE857 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F4A69321DD181E3009CE857 /* LitCove.app */,
+				3F4A694B1DD181E3009CE857 /* LitCoveTests.xctest */,
+				3F4A69561DD181E3009CE857 /* LitCoveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F4A69341DD181E3009CE857 /* LitCove */ = {
+			isa = PBXGroup;
+			children = (
+				3F4A69681DD18234009CE857 /* CoveChat */,
+				3F4A69381DD181E3009CE857 /* AppDelegate.h */,
+				3F4A69391DD181E3009CE857 /* AppDelegate.m */,
+				3F4A693B1DD181E3009CE857 /* ViewController.h */,
+				3F4A693C1DD181E3009CE857 /* ViewController.m */,
+				3F4A693E1DD181E3009CE857 /* Main.storyboard */,
+				3F4A69411DD181E3009CE857 /* Assets.xcassets */,
+				3F4A69431DD181E3009CE857 /* LaunchScreen.storyboard */,
+				3F4A69461DD181E3009CE857 /* Info.plist */,
+				3F4A69351DD181E3009CE857 /* Supporting Files */,
+			);
+			path = LitCove;
+			sourceTree = "<group>";
+		};
+		3F4A69351DD181E3009CE857 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F4A69361DD181E3009CE857 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3F4A694E1DD181E3009CE857 /* LitCoveTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F4A694F1DD181E3009CE857 /* LitCoveTests.m */,
+				3F4A69511DD181E3009CE857 /* Info.plist */,
+			);
+			path = LitCoveTests;
+			sourceTree = "<group>";
+		};
+		3F4A69591DD181E3009CE857 /* LitCoveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3F4A695A1DD181E3009CE857 /* LitCoveUITests.m */,
+				3F4A695C1DD181E3009CE857 /* Info.plist */,
+			);
+			path = LitCoveUITests;
+			sourceTree = "<group>";
+		};
+		3F4A69681DD18234009CE857 /* CoveChat */ = {
+			isa = PBXGroup;
+			children = (
+				3F4A69691DD182F4009CE857 /* ChatSessionInputBar.h */,
+				3F4A696A1DD182F4009CE857 /* ChatSessionInputBar.m */,
+			);
+			path = CoveChat;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F4A69311DD181E3009CE857 /* LitCove */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F4A695F1DD181E3009CE857 /* Build configuration list for PBXNativeTarget "LitCove" */;
+			buildPhases = (
+				3F4A692E1DD181E3009CE857 /* Sources */,
+				3F4A692F1DD181E3009CE857 /* Frameworks */,
+				3F4A69301DD181E3009CE857 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LitCove;
+			productName = LitCove;
+			productReference = 3F4A69321DD181E3009CE857 /* LitCove.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F4A694A1DD181E3009CE857 /* LitCoveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F4A69621DD181E3009CE857 /* Build configuration list for PBXNativeTarget "LitCoveTests" */;
+			buildPhases = (
+				3F4A69471DD181E3009CE857 /* Sources */,
+				3F4A69481DD181E3009CE857 /* Frameworks */,
+				3F4A69491DD181E3009CE857 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F4A694D1DD181E3009CE857 /* PBXTargetDependency */,
+			);
+			name = LitCoveTests;
+			productName = LitCoveTests;
+			productReference = 3F4A694B1DD181E3009CE857 /* LitCoveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3F4A69551DD181E3009CE857 /* LitCoveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F4A69651DD181E3009CE857 /* Build configuration list for PBXNativeTarget "LitCoveUITests" */;
+			buildPhases = (
+				3F4A69521DD181E3009CE857 /* Sources */,
+				3F4A69531DD181E3009CE857 /* Frameworks */,
+				3F4A69541DD181E3009CE857 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F4A69581DD181E3009CE857 /* PBXTargetDependency */,
+			);
+			name = LitCoveUITests;
+			productName = LitCoveUITests;
+			productReference = 3F4A69561DD181E3009CE857 /* LitCoveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F4A692A1DD181E2009CE857 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = ShowTime;
+				TargetAttributes = {
+					3F4A69311DD181E3009CE857 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = V5DN7BF6A2;
+						ProvisioningStyle = Automatic;
+					};
+					3F4A694A1DD181E3009CE857 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3F4A69311DD181E3009CE857;
+					};
+					3F4A69551DD181E3009CE857 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3F4A69311DD181E3009CE857;
+					};
+				};
+			};
+			buildConfigurationList = 3F4A692D1DD181E2009CE857 /* Build configuration list for PBXProject "LitCove" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F4A69291DD181E2009CE857;
+			productRefGroup = 3F4A69331DD181E3009CE857 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F4A69311DD181E3009CE857 /* LitCove */,
+				3F4A694A1DD181E3009CE857 /* LitCoveTests */,
+				3F4A69551DD181E3009CE857 /* LitCoveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F4A69301DD181E3009CE857 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F4A69451DD181E3009CE857 /* LaunchScreen.storyboard in Resources */,
+				3F4A69421DD181E3009CE857 /* Assets.xcassets in Resources */,
+				3F4A69401DD181E3009CE857 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F4A69491DD181E3009CE857 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F4A69541DD181E3009CE857 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F4A692E1DD181E3009CE857 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F4A693D1DD181E3009CE857 /* ViewController.m in Sources */,
+				3F4A696B1DD182F4009CE857 /* ChatSessionInputBar.m in Sources */,
+				3F4A693A1DD181E3009CE857 /* AppDelegate.m in Sources */,
+				3F4A69371DD181E3009CE857 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F4A69471DD181E3009CE857 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F4A69501DD181E3009CE857 /* LitCoveTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F4A69521DD181E3009CE857 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F4A695B1DD181E3009CE857 /* LitCoveUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F4A694D1DD181E3009CE857 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F4A69311DD181E3009CE857 /* LitCove */;
+			targetProxy = 3F4A694C1DD181E3009CE857 /* PBXContainerItemProxy */;
+		};
+		3F4A69581DD181E3009CE857 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F4A69311DD181E3009CE857 /* LitCove */;
+			targetProxy = 3F4A69571DD181E3009CE857 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3F4A693E1DD181E3009CE857 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F4A693F1DD181E3009CE857 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3F4A69431DD181E3009CE857 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F4A69441DD181E3009CE857 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F4A695D1DD181E3009CE857 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3F4A695E1DD181E3009CE857 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F4A69601DD181E3009CE857 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V5DN7BF6A2;
+				INFOPLIST_FILE = LitCove/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.showtime.LitCove;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3F4A69611DD181E3009CE857 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V5DN7BF6A2;
+				INFOPLIST_FILE = LitCove/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.showtime.LitCove;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3F4A69631DD181E3009CE857 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LitCoveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.showtime.LitCoveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LitCove.app/LitCove";
+			};
+			name = Debug;
+		};
+		3F4A69641DD181E3009CE857 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LitCoveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.showtime.LitCoveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LitCove.app/LitCove";
+			};
+			name = Release;
+		};
+		3F4A69661DD181E3009CE857 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LitCoveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.showtime.LitCoveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LitCove;
+			};
+			name = Debug;
+		};
+		3F4A69671DD181E3009CE857 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LitCoveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.showtime.LitCoveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LitCove;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F4A692D1DD181E2009CE857 /* Build configuration list for PBXProject "LitCove" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F4A695D1DD181E3009CE857 /* Debug */,
+				3F4A695E1DD181E3009CE857 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F4A695F1DD181E3009CE857 /* Build configuration list for PBXNativeTarget "LitCove" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F4A69601DD181E3009CE857 /* Debug */,
+				3F4A69611DD181E3009CE857 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3F4A69621DD181E3009CE857 /* Build configuration list for PBXNativeTarget "LitCoveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F4A69631DD181E3009CE857 /* Debug */,
+				3F4A69641DD181E3009CE857 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3F4A69651DD181E3009CE857 /* Build configuration list for PBXNativeTarget "LitCoveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F4A69661DD181E3009CE857 /* Debug */,
+				3F4A69671DD181E3009CE857 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F4A692A1DD181E2009CE857 /* Project object */;
+}
