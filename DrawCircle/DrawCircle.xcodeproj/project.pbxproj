@@ -17,6 +17,7 @@
 		3F5AA6621DD1C25800AFFF6E /* DrawCircleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5AA6611DD1C25800AFFF6E /* DrawCircleUITests.m */; };
 		3F5AA6711DD1C48B00AFFF6E /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5AA6701DD1C48B00AFFF6E /* CustomView.m */; };
 		3F5AA6741DD1C94A00AFFF6E /* UAProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5AA6731DD1C94A00AFFF6E /* UAProgressView.m */; };
+		738CF8E71DD20B56002CACD8 /* STZhiHuLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 738CF8E61DD20B56002CACD8 /* STZhiHuLoading.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		3F5AA6701DD1C48B00AFFF6E /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		3F5AA6721DD1C94A00AFFF6E /* UAProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAProgressView.h; sourceTree = "<group>"; };
 		3F5AA6731DD1C94A00AFFF6E /* UAProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAProgressView.m; sourceTree = "<group>"; };
+		738CF8E51DD20B56002CACD8 /* STZhiHuLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STZhiHuLoading.h; sourceTree = "<group>"; };
+		738CF8E61DD20B56002CACD8 /* STZhiHuLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STZhiHuLoading.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				3F5AA63C1DD1C25800AFFF6E /* Supporting Files */,
 				3F5AA66F1DD1C48B00AFFF6E /* CustomView.h */,
 				3F5AA6701DD1C48B00AFFF6E /* CustomView.m */,
+				738CF8E51DD20B56002CACD8 /* STZhiHuLoading.h */,
+				738CF8E61DD20B56002CACD8 /* STZhiHuLoading.m */,
 			);
 			path = DrawCircle;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 			files = (
 				3F5AA6441DD1C25800AFFF6E /* ViewController.m in Sources */,
 				3F5AA6711DD1C48B00AFFF6E /* CustomView.m in Sources */,
+				738CF8E71DD20B56002CACD8 /* STZhiHuLoading.m in Sources */,
 				3F5AA6741DD1C94A00AFFF6E /* UAProgressView.m in Sources */,
 				3F5AA6411DD1C25800AFFF6E /* AppDelegate.m in Sources */,
 				3F5AA63E1DD1C25800AFFF6E /* main.m in Sources */,
@@ -517,6 +523,7 @@
 				3F5AA6681DD1C25800AFFF6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F5AA6691DD1C25800AFFF6E /* Build configuration list for PBXNativeTarget "DrawCircleTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +532,7 @@
 				3F5AA66B1DD1C25800AFFF6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F5AA66C1DD1C25800AFFF6E /* Build configuration list for PBXNativeTarget "DrawCircleUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +541,7 @@
 				3F5AA66E1DD1C25800AFFF6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
